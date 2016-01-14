@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 卫星信噪比界面(id: singal_layout),权重比(1:2:2)-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signal_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color" >
+    
+    <include layout="@layout/title_bar" />
+    
+    <!-- 显示GNSS开关状态和显示卫星信噪比复选框信息 -->
+    <LinearLayout
+        android:baselineAligned="false"
+        style="@style/layout_super_without_border_style"
+        android:layout_weight="1.0" >
+        
+        <!-- GPS开关状态显示框(id:gps_switch)，包括2行，第一行显示信息，第二行显示状态 -->
+        <RelativeLayout
+            android:id="@+id/gnss_switch"
+            style="@style/layout_base_border_style"
+            android:layout_weight="1.0"
+            android:background="@drawable/switch_buttom_selector" >
+            <!-- GPS开关状态提示信息 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/gnss_status" />
+            <!-- GPS开关打开或关闭信息(id:gps_status) -->
+            <TextView
+                android:id="@+id/gnss_status"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+        
+        <!-- 卫星定位状态，包括2行2列 -->
+        <RelativeLayout
+            android:id="@+id/gnss_fix"
+            style="@style/layout_base_border_style"
+            android:layout_weight="1.0" >
+            <!-- GPS开关状态提示信息 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/gnss_fix_status" />
+            <!-- GPS开关打开或关闭信息(id:gps_status) -->
+            <TextView
+                android:id="@+id/gnss_fix_status"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+        
+    </LinearLayout>
+    
+    
+    <!-- 显示GPS/GLONASS可见卫星数，已连接卫星数，以及卫星信噪比 -->
+    <LinearLayout
+        android:baselineAligned="false"
+        style="@style/layout_super_border_style"
+        android:layout_weight="2" >
+        
+        <!-- 显示可见卫星信息，2行，第一行显示信息，第二行显示数字 -->
+        <LinearLayout
+            style="@style/layout_super_without_border_style"
+            android:baselineAligned="false"
+            android:layout_weight="1.0" >
+            <!-- 显示可见卫星数信息 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+                <!-- 显示可见卫星数提示信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_spacing"
+                    android:layout_marginTop="@dimen/view_spacing"
+                    android:gravity="left"
+                    android:text="@string/visiable"
+                    android:textSize="@dimen/title_font_size" />
+                <!-- 显示可见卫星数目(id:visiable_num) -->
+                <TextView
+                    android:id="@+id/visiable_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_spacing"
+                    android:layout_marginTop="@dimen/view_spacing"
+                    android:gravity="left"
+                    android:textSize="@dimen/title_font_size"
+                    android:textColor="@color/content_font_color" />
+            </LinearLayout>
+            
+            <!-- 显示已连接卫星信息，2行，第一行显示信息，第二行显示数字 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+                <!-- 显示已连接卫星数信息-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_spacing"
+                    android:layout_marginTop="@dimen/view_spacing"
+                    android:gravity="right"
+                    android:text="@string/connect"
+                    android:textSize="@dimen/title_font_size" />
+                <!-- 显示已连接卫星数目(id:connect_num) -->
+                <TextView
+                    android:id="@+id/connect_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_spacing"
+                    android:layout_marginTop="@dimen/view_spacing"
+                    android:gravity="right"
+                    android:textSize="@dimen/title_font_size"
+                    android:textColor="@color/content_font_color" />
+            </LinearLayout>
+        </LinearLayout>
+       
+        <!-- 显示卫星信号的信噪比信息(id:signal_info) -->
+        <LinearLayout
+            android:id="@+id/snr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.0"
+            android:layout_marginLeft="@dimen/view_spacing"
+            android:layout_marginRight="@dimen/view_spacing" >
+            <cn.ac.casic.gnss.graphics.BarChart
+                android:id="@+id/snr_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_spacing"
+                android:background="@color/background_color" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- 显示BDS/GALILEO可见卫星数，已连接卫星数，以及卫星信噪比 -->
+    <LinearLayout
+        android:baselineAligned="false"
+        style="@style/layout_super_border_style"
+        android:layout_weight="2" >
+        
+        <!-- 显示可见卫星信息，2行，第一行显示信息，第二行显示数字 -->
+        <LinearLayout
+            style="@style/layout_super_without_border_style"
+            android:baselineAligned="false"
+            android:layout_weight="1.0" >
+            <!-- 显示可见卫星数信息 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+                <!-- 显示可见卫星数提示信息 -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_spacing"
+                    android:layout_marginTop="@dimen/view_spacing"
+                    android:gravity="left"
+                    android:text="@string/visiable"
+                    android:textSize="@dimen/title_font_size" />
+                <!-- 显示可见卫星数目(id:visiable_num) -->
+                <TextView
+                    android:id="@+id/bds_visiable_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_spacing"
+                    android:layout_marginTop="@dimen/view_spacing"
+                    android:gravity="left"
+                    android:textSize="@dimen/title_font_size"
+                    android:textColor="@color/content_font_color" />
+            </LinearLayout>
+            
+            <!-- 显示已连接卫星信息，2行，第一行显示信息，第二行显示数字 -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:orientation="horizontal" >
+                <!-- 显示已连接卫星数信息-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_spacing"
+                    android:layout_marginTop="@dimen/view_spacing"
+                    android:gravity="right"
+                    android:text="@string/connect"
+                    android:textSize="@dimen/title_font_size" />
+                <!-- 显示已连接卫星数目(id:connect_num) -->
+                <TextView
+                    android:id="@+id/bds_connect_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/view_spacing"
+                    android:layout_marginTop="@dimen/view_spacing"
+                    android:gravity="right"
+                    android:textSize="@dimen/title_font_size"
+                    android:textColor="@color/content_font_color" />
+            </LinearLayout>
+        </LinearLayout>
+       
+        <!-- 显示卫星信号的信噪比信息(id:signal_info) -->
+        <LinearLayout
+            android:id="@+id/bds_snr_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6.0"
+            android:layout_marginLeft="@dimen/view_spacing"
+            android:layout_marginRight="@dimen/view_spacing" >
+            <cn.ac.casic.gnss.graphics.BdsBarChart
+                android:id="@+id/bds_snr_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_spacing"
+                android:background="@color/background_color" />
+        </LinearLayout>
+    </LinearLayout>
+    
+</LinearLayout>

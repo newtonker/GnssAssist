@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/feedback_background_color"
+    android:orientation="vertical" >
+
+    <include layout="@layout/feedback_title" />
+
+    <ListView
+        android:id="@+id/feedback_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dp"
+        android:background="@color/feedback_white"
+        android:cacheColorHint="@android:color/transparent"
+        android:dividerHeight="10.0dp"
+        android:divider="@color/background_color" />
+
+</LinearLayout>

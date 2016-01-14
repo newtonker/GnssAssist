@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main_relative_layout" >
+    
+    <include layout="@layout/title_bar" />
+    
+    <RadioGroup
+        android:id="@+id/group"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_alignParentBottom="true" >
+        
+        <RadioButton 
+            android:id="@+id/button_signal"
+            style="@style/tab_style"
+			android:drawableTop="@drawable/tab_signal"
+			android:text="@string/signal"
+            android:checked="true" />
+        <RadioButton
+            android:id="@+id/button_orientation"
+            style="@style/tab_style"
+            android:text="@string/orientation"
+            android:drawableTop="@drawable/tab_orientation" />
+        <RadioButton
+            android:id="@+id/button_time"
+            style="@style/tab_style"
+            android:text="@string/time"
+            android:drawableTop="@drawable/tab_time" />
+        <RadioButton
+            android:id="@+id/button_message"
+            style="@style/tab_style"
+            android:text="@string/message"
+            android:drawableTop="@drawable/tab_message" />
+    </RadioGroup>
+   	
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_above="@id/group"
+        android:background="@color/devide_line" />
+
+    <FrameLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/line"
+        android:background="#FFFFFFFF" />
+
+</RelativeLayout>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 导航电文显示界面，权重比1 -->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/time_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    android:orientation="vertical" >
+    
+    <include layout="@layout/title_bar" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/layout_spacing"
+        android:background="@drawable/border" >
+        <!-- 导航电文复选框，包括1行4列-->
+        <TableLayout
+            android:layout_height="0dp"
+            android:layout_width="match_parent"
+            android:layout_weight="1.0"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/layout_spacing" >
+            <!-- 四个复选框信息 -->
+            <TableRow>
+                <CheckBox
+                    android:id="@+id/message_gps"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/gps"
+                    android:textSize="@dimen/title_font_size" />
+                <CheckBox
+                    android:id="@+id/message_bds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/bds"
+                    android:textSize="@dimen/title_font_size" />
+                <CheckBox
+                    android:id="@+id/message_glonass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="@string/glonass"
+                    android:textSize="@dimen/title_font_size" />
+				<CheckBox
+				    android:id="@+id/message_galileo"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:checked="true"
+				    android:text="@string/galileo"
+				    android:textSize="@dimen/title_font_size" />
+            </TableRow>
+        </TableLayout>
+        
+        <!-- 暂停及保存部分 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/layout_spacing"
+            android:orientation="horizontal" >
+            <Button
+                android:id="@+id/message_pause"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/title_font_size"/>
+            <Button
+                android:id="@+id/message_clear"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/message_clear"
+                android:textSize="@dimen/title_font_size"/>
+            <Button
+                android:id="@+id/message_save"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:textSize="@dimen/title_font_size"/>
+            <Button
+                android:id="@+id/message_open"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/message_open"
+                android:textSize="@dimen/title_font_size"/>
+        </LinearLayout>
+    </LinearLayout>
+    
+    <!-- 显示导航电文信息，一行显示一条信息(id: message_info) -->
+    <ScrollView
+        android:id="@+id/message_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:layout_margin="@dimen/layout_spacing"
+        android:background="@drawable/border" >
+		<HorizontalScrollView
+            android:id="@+id/message_horizontal_scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+      		<TextView
+        		android:id="@+id/message_info"
+        		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:paddingBottom="12dp"
+        		android:layout_marginLeft="@dimen/view_spacing"
+        		android:textSize="@dimen/message_text_size" />
+      		
+		</HorizontalScrollView>
+    </ScrollView>
+
+        
+    
+    
+</LinearLayout>

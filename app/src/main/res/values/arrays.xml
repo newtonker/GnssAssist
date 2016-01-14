@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 定义一个设置日期格式的数组 -->
+    <array name="setting_date_array" >
+        <item>年/月/日</item>
+        <item>月/日/年</item>
+        <item>日/月/年</item>
+    </array>
+    <!-- 定义一个设置时间格式的数组 -->
+    <array name="setting_time_array" >
+        <item>24小时制</item>
+        <item>12小时制</item>
+    </array>
+    <!-- 定义一个设置坐标系格式的数组 -->
+    <array name="setting_longitude_array" >
+        <item>DDD.DDDDD°</item>
+        <item>DDD°MM.MMMMM′</item>
+        <item>DDD°MM′SS.SSSSS″</item>
+    </array>
+    <!-- 定义一个设置准确度精度的数组 -->
+    <array name="setting_accuracy_array" >
+       	<item>精确到小数点后一位</item>
+        <item>精确到整数</item>
+    </array>
+    <!-- 定义一个设置准确度精度的数组 -->
+    <array name="setting_altitude_array" >
+        <item>精确到小数点后一位</item>
+        <item>精确到整数</item>
+    </array>
+    <!-- 定义一个设置准确度精度的数组 -->
+    <array name="setting_speed_array" >
+        <item>精确到小数点后一位</item>
+        <item>精确到整数</item>
+    </array>
+    <!-- 定义一个设置准确度精度的数组 -->
+    <array name="setting_bearing_array" >
+        <item>精确到小数点后一位</item>
+        <item>精确到整数</item>
+    </array>
+    <!-- 定义一个设置准确度精度的数组 -->
+    <array name="setting_default_array" >
+        <item>恢复默认设置</item>
+    </array>
+</resources>

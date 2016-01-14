@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="45.0dp"
+    android:background="@drawable/feedback_title"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    tools:ignore="ContentDescription" >
+
+    <ImageView
+        android:id="@+id/map_title_left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/feedback_title_back_button_selector"
+        android:padding="10.0dp" />
+
+    <TextView
+        android:id="@+id/map_title_name"
+        android:layout_width="150.0dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:ellipsize="middle"
+        android:gravity="center"
+        android:shadowDx="2.0"
+        android:shadowDy="2.0"
+        android:shadowRadius="1.0"
+        android:singleLine="true"
+        android:textColor="@color/feedback_white"
+        android:textSize="@dimen/content_font_size" />
+
+    <ImageView
+        android:id="@+id/map_title_right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/about_title_ok_button_selector"
+        android:paddingRight="10.0dp" />
+
+</RelativeLayout>

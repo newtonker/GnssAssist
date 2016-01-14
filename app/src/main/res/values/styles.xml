@@ -1,0 +1,176 @@
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+	<!-- 
+		共定义了
+			1、一种标签样式
+				（1）tab_style
+			2、三种标题样式
+				（1）title_center_without_layout_params_style
+				（2）title_left_style
+				（3）title_right_style
+			3、四种内容样式
+				（1）content_center_without_layout_params_style
+				（2）content_center_style
+				（3）content_left_style
+				（4）content_right_style
+			4、中布局样式
+				（1）layout_super_without_border_style
+				（2）layout_super_border_style
+				（3）layout_base_without_border_style
+				（4）layout_base_border_style
+	 -->
+	
+	<!-- Tab Style -->
+	<style name="tab_style">
+	    <item name="android:layout_width">0dp</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:layout_weight">1.0</item>
+	    <item name="android:button">@null</item>
+	    <item name="android:textSize">8sp</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:background">@drawable/tab_background</item>
+	    <item name="android:layout_marginLeft">@dimen/layout_spacing</item>
+	    <item name="android:layout_marginRight">@dimen/layout_spacing</item>
+	</style>
+	
+	 
+    <!-- 
+    	设置标题样式1（指定了文字提示标题的属性）
+		页边距(左5dp，上5dp，右5dp)，文字对齐方式（居中对齐），字体大小（10sp） 
+	 -->
+    <style name="title_center_without_layout_params_style">
+        <item name="android:layout_marginLeft">@dimen/view_spacing</item>
+        <item name="android:layout_marginTop">@dimen/view_spacing</item>
+        <item name="android:layout_marginRight">@dimen/view_spacing</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/title_font_size</item>
+    </style>
+    
+    <!-- 
+    	设置标题样式2（指定了文字提示标题的属性），继承了标题样式1，覆盖了父类对齐方式，增加了组件宽度和高度
+    	宽度（同父类），高度（包裹内容）
+		页边距(左5dp，上5dp，右5dp)，文字对齐方式（右对齐），字体大小（10sp）
+     -->
+    <style name="title_left_style" parent="@style/title_center_without_layout_params_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">left</item>
+    </style>
+    
+    <!-- 
+    	设置标题样式3（指定了文字提示标题的属性），继承了标题样式2，覆盖了父类对齐方式
+    	宽度（同父类），高度（包裹内容）
+		页边距(左5dp，上5dp，右5dp)，文字对齐方式（居中），字体大小（10sp）
+     -->
+     <style name="title_right_style" parent="@style/title_left_style">
+         <item name="android:gravity">right</item>
+     </style>
+    
+    <!-- 
+    	设置内容样式1（制定了内容文字的属性）
+    	页边距（左5dp，右5dp），对齐方式（居中），字体大小（12sp） 
+    -->
+    <style name="content_center_without_layout_params_style">
+        <item name="android:layout_marginLeft">@dimen/view_spacing</item>
+        <item name="android:layout_marginRight">@dimen/view_spacing</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">@dimen/content_font_size</item>
+        <item name="android:textColor">@color/content_font_color</item>
+    </style>
+    
+    <!-- 
+    	设置内容样式2（制定了内容文字的属性），继承了内容样式1，增加了组件的宽度和高度
+    	宽度（同父类），高度（包裹内容）
+    	页边距（左5dp，右5dp），对齐方式（居中），字体大小（12sp） 
+    -->
+    <style name="content_center_style" parent="@style/content_center_without_layout_params_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+    
+    <!-- 
+    	设置内容样式3（制定了内容文字的属性），继承了内容样式2，覆盖了组件内文字的对齐方式
+    	宽度（同父类），高度（包裹内容）
+    	页边距（左5dp，右5dp），对齐方式（居中），字体大小（12sp） 
+    -->
+    <style name="content_left_style" parent="@style/content_center_style">
+        <item name="android:gravity">left</item>
+    </style>
+    
+    <!-- 
+    	设置内容样式4（制定了内容文字的属性），继承了内容样式2，覆盖了组件内文字的对齐方式
+    	宽度（同父类），高度（包裹内容）
+    	页边距（左5dp，右5dp），对齐方式（居中），字体大小（12sp） 
+    -->
+    <style name="content_right_style" parent="@style/content_center_style">
+        <item name="android:gravity">right</item>
+    </style>
+    
+    <!-- 
+    	设置布局格式1（设定了布局的部分属性）
+    	布局管理器不与子元素对齐，宽度（同父类），高度（0dip，依靠权重），排列方式（水平）
+    -->
+    <style name="layout_super_without_border_style">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dip</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+    <!-- 
+    	设置布局格式2（设定了布局的部分属性），继承了布局格式1，覆盖了排列方式，增加了页边距和背景边框
+    	布局管理器不与子元素对齐，宽度（同父类），高度（0dip，依靠权重）
+    	排列方式（垂直），页边距（3dp），背景（同border）
+    -->
+    <style name="layout_super_border_style" parent="layout_super_without_border_style">
+        <item name="android:layout_margin">@dimen/layout_spacing</item>
+        <item name="android:background">@drawable/border</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!-- 
+    	设置布局格式3（设定了布局的部分属性）
+    	宽度（0dip，依靠权重），高度（同父类），排列方式（垂直）
+     -->
+     <style name="layout_base_without_border_style">
+         <item name="android:layout_width">0dp</item>
+         <item name="android:layout_height">match_parent</item>
+         <item name="android:orientation">vertical</item>
+     </style>
+    <!-- 
+     	设置布局格式4（设定了布局的部分属性），继承了布局格式3，增加了页边距，背景边框
+     	宽度（0dip，依靠权重），高度（同父类），页边距（3dp)，背景（同border)
+     -->
+     <style name="layout_base_border_style" parent="layout_base_without_border_style">
+         <item name="android:layout_margin">@dimen/layout_spacing</item>
+         <item name="android:background">@drawable/border</item>
+     </style>
+     
+    <!--
+        Base application theme, dependent on API level. This theme is replaced
+        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+    -->
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    
+        <!-- Application theme. -->
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+    
+    
+    <!-- 菜单文本样式 -->
+    <style name="menuTextStyle" parent="@android:style/TextAppearance.Small">
+        <item name="android:textSize">@dimen/menu_font_size</item>
+        <item name="android:textColor">@color/menu_text_color</item>
+    </style>
+    
+    <!-- 菜单显示动画 -->
+    <style name="menushow">
+        <item name="android:windowEnterAnimation">@anim/menu_in</item>
+        <item name="android:windowExitAnimation">@anim/menu_out</item>
+    </style>
+
+</resources>

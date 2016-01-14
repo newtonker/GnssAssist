@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF" >
+   
+    <ImageView
+        android:id="@+id/start_compang_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/start_company_pic" />
+    
+    <ImageView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/app_name"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@id/start_compang_name"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/start_logo"/>
+    
+    <TextView
+        android:id="@+id/start_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_below="@id/start_compang_name"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="@string/start_app"
+        android:textSize="14sp"
+        android:textColor="#FF0000FF" />
+    
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/start_app"
+        android:layout_marginTop="5dp"
+        android:text="@string/start_version"
+        android:textColor="#FF0000FF"
+        android:textSize="14sp" />
+    
+    <TextView
+        android:id="@+id/start_rights_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
+        android:text="@string/start_rights_text"
+        android:textSize="12sp"
+        android:textColor="#FF000000" />
+    
+	<ImageView
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_centerHorizontal="true"
+	    android:layout_above="@id/start_rights_text"
+	    android:contentDescription="@string/app_name"
+	    android:layout_marginBottom="50dp"
+	    android:src="@drawable/start_designer" />
+
+</RelativeLayout>

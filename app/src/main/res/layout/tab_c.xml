@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 被合并前的时间界面，权重(1:1)|(1(1:1),1(1:1),1(1:1)) -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/signal_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color" >
+    
+    <include layout="@layout/title_bar" />
+    
+    <!-- UTC日期、世界标准时间显示 -->
+    <LinearLayout
+        android:baselineAligned="false"
+        style="@style/layout_super_without_border_style"
+        android:layout_weight="1" >
+        <!--  UTC日期显示，2行，第一行显示文字提示信息，第二行显示实际时间 -->
+        <RelativeLayout    
+        	style="@style/layout_base_border_style"
+            android:layout_weight="1" >
+            <!-- 第一行显示文字提示信息 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/UTC_date" />
+            <!-- 第二行显示实际信息(id: UTC_date) -->
+            <TextView
+                android:id="@+id/UTC_date"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+        <!--  UTC时间显示，2行，第一行显示文字提示，第二行显示实际信息 -->
+        <RelativeLayout
+            style="@style/layout_base_border_style"
+            android:layout_weight="1" >
+            <!-- 第一行文字信息显示 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/UTC_time" />
+            <!-- 第二行实际信息显示(id: UTC_time) -->
+            <TextView
+                android:id="@+id/UTC_time"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+    </LinearLayout>
+    
+    
+    <!-- 本地日期，本地时间信息显示 -->
+    <LinearLayout
+        android:baselineAligned="false"
+        style="@style/layout_super_without_border_style"
+        android:layout_weight="1" >
+        <!-- 本地日期显示，2行，第一行显示文字提示，第二行显示实际信息 -->
+        <RelativeLayout
+            style="@style/layout_base_border_style"
+            android:layout_weight="1" >
+            <!-- 第一行显示文字提示信息 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/local_date" />
+            <!-- 第二行显示实际信息(id: local_date) -->
+            <TextView
+                android:id="@+id/local_date"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+        <!-- 本地日期显示，2行，第一行显示文字提示，第二行显示实际信息 -->
+        <RelativeLayout
+            style="@style/layout_base_border_style"
+            android:layout_weight="1" >
+            <!-- 第一行显示文字提示 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/local_time" />
+            <!-- 第二行显示实际信息(id: local_time) -->
+            <TextView
+                android:id="@+id/local_time"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+    </LinearLayout>
+   
+    <!-- 经纬度显示，2行，第一行显示维度信息，第二行显示经度信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/layout_spacing"
+        android:orientation="vertical"
+        android:background="@drawable/border" >
+        <!-- 维度信息，1行，左侧显示文字提示，右侧显示实际值 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            <!-- 左侧：文字提示信息 -->
+            <TextView
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                style="@style/title_center_without_layout_params_style"
+                android:text="@string/latitude" />
+            <!-- 右侧：维度实际值(id: latitude_num) -->
+            <TextView
+                android:id="@+id/latitude_value"
+                android:layout_width="0dip"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                style="@style/content_center_without_layout_params_style" />
+        </LinearLayout>
+        <!-- 经度信息，1行，左侧显示文字提示，右侧显示实际值 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+            <!-- 左侧：文字提示信息 -->
+            <TextView
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                style="@style/title_center_without_layout_params_style"
+                android:text="@string/longitude" />
+            <!-- 右侧：经度实际值(id:longitude) -->
+            <TextView
+                android:id="@+id/longitude_value"
+                android:layout_width="0dip"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                style="@style/content_center_without_layout_params_style" />
+        </LinearLayout>
+    </LinearLayout>
+    
+    
+    <!-- 方向角和海拔显示，2行，第一行显示文字提示信息，第二行显示值 -->
+    <LinearLayout
+        android:baselineAligned="false"
+        style="@style/layout_super_without_border_style"
+        android:layout_weight="1" >
+        <!-- 方向角显示，2行，第一行显示文字提示信息，第二行显示实际值 -->
+        <RelativeLayout    
+            style="@style/layout_base_border_style"
+            android:layout_weight="1" >
+            <!-- 准确度提示信息 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/accuracy_info" />
+            <!-- 准确度值的显示(id:accuracy_num) -->
+            <TextView
+                android:id="@+id/accuracy_value"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+        <!-- 海拔信息显示，2行，第一行显示文字提示，第二行显示实际信息 -->
+        <RelativeLayout
+            style="@style/layout_base_border_style"
+            android:layout_weight="1" >
+            <!-- 第一行文字信息显示 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/altitude" />
+            <!-- 第二行实际信息显示(id: altitude_num) -->
+            <TextView
+                android:id="@+id/altitude_value"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+    </LinearLayout>
+    
+    
+    <!-- 速度和磁偏角显示，2行，第一行显示文字提示信息，第二行显示值 -->
+    <LinearLayout
+        android:baselineAligned="false"
+        style="@style/layout_super_without_border_style"
+        android:layout_weight="1" >
+        <!-- 速度显示，2行，第一行显示文字提示信息，第二行显示实际值 -->
+        <RelativeLayout    
+            style="@style/layout_base_border_style"
+            android:layout_weight="1" >
+            <!-- 第一行显示文字提示信息 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/speed" />
+            <!-- 第二行显示实际信息(id: speed_num) -->
+            <TextView
+                android:id="@+id/speed_value"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+        <!-- 磁偏角信息显示，2行，第一行显示文字提示，第二行显示实际信息 -->
+        <RelativeLayout
+            style="@style/layout_base_border_style"
+            android:layout_weight="1" >
+            <!-- 第一行显示文字提示信息 -->
+            <TextView
+                style="@style/title_left_style"
+                android:text="@string/direction_angle" />
+            <!-- 第二行显示实际信息(id: direction_angle) -->
+            <TextView
+                android:id="@+id/direction_angle"
+                style="@style/content_center_style" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

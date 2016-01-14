@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <!-- 组件四个圆角的半径 -->
+    <dimen name="corner_radius">5dp</dimen>
+    <!-- 组件边框线条的宽度 -->
+    <dimen name="stroke_width">1dp</dimen>
+    <!-- 各个组件距容器的边距 -->
+    <dimen name="layout_spacing">3dp</dimen>
+    <!-- 各View组件距组件边界的距离 -->
+    <dimen name="view_spacing">5dp</dimen>
+    <!-- 显示卫星的半径 -->
+    <dimen name="satellite_radius">8dp</dimen>
+    <!-- 设置颜色柱状图左右的距离 -->
+    <dimen name="bar_left_to_border">20dp</dimen>
+    <dimen name="bar_right_to_border">20dp</dimen>
+    <!-- 设置柱状图上下的边距 -->
+	<dimen name="bar_chart_margin_top">0dp</dimen>
+	<dimen name="bar_chart_margin_bottom">10dp</dimen> 
+	<!-- 设置柱状图的间距 -->
+	<dimen name="bar_chart_spacing">3dp</dimen>
+	
+	<!-- 设置菜单字体大小 -->
+	<dimen name="menu_font_size">12sp</dimen>
+	<!-- 中文标题提示字体大小 -->
+    <dimen name="title_font_size">14sp</dimen>
+    <!-- 实际信息显示字体大小 -->
+    <dimen name="content_font_size">18sp</dimen>
+	<!-- 设置协议的字体大小 -->
+	<dimen name="message_text_size">12sp</dimen>
+	
+	<!-- 设置协议显示距离底部的距离 -->
+	<dimen name="message_text_to_bottom">14sp</dimen>
+	
+	<!-- 打开文件对话框 -->
+	<dimen name="padding_small">8dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="filedialog_item_image_width">32dp</dimen>
+    <dimen name="filedialog_item_image_height">32dp</dimen>
+    <dimen name="filedialog_item_name_font_size">18sp</dimen>
+    <dimen name="filedialog_item_path_font_size">14sp</dimen>
+    <dimen name="filedialog_item_path_padding_left">10dp</dimen>
+    	
+	
+</resources>

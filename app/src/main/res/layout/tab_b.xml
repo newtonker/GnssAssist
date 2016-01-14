@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 卫星方位显示界面，权重(5:1)|(1(1:1):4) -->
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/orientation_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background_color" >
+    
+    <include layout="@layout/title_bar" />
+    
+    <!-- 显示卫星方位图 -->
+    <LinearLayout
+        android:baselineAligned="false"
+        style="@style/layout_super_border_style"
+        android:layout_weight="6" >
+        
+        <LinearLayout
+            android:baselineAligned="false"
+            style="@style/layout_super_without_border_style"
+            android:layout_weight="1.0" >
+            <!-- 显示可见卫星数信息 -->
+            <RelativeLayout
+                style="@style/layout_base_without_border_style"
+                android:layout_weight="1.0" >
+                <!-- 显示可见卫星数提示信息 -->
+                <TextView
+                    style="@style/title_left_style"
+                    android:text="@string/visiable" />
+                <!-- 显示可见卫星数目(id:visiable_num) -->
+                <TextView
+                    android:id="@+id/bvisiable_num"
+                    style="@style/content_left_style" />
+            </RelativeLayout>
+            
+            <!-- 显示首次定位时长-->
+            <!-- 显示距离首次定位时长-->
+            <!-- 显示时长(id:connect_time) -->
+            <!--  
+            <RelativeLayout
+            style="@style/layout_base_without_border_style"
+            android:layout_weight="1" >
+           
+            <TextView
+                style="@style/title_right_style"
+                android:text="@string/connect_time"
+                android:gravity="center" />
+            
+            <TextView
+                android:id="@+id/connect_time"
+                style="@style/content_right_style"
+                android:gravity="center" />
+        	</RelativeLayout>
+            -->
+            <!-- 显示已连接卫星信息，2行，第一行显示信息，第二行显示数字 -->
+            <RelativeLayout
+                style="@style/layout_base_without_border_style"
+                android:layout_weight="1" >
+                <!-- 显示已连接卫星数信息-->
+                <TextView
+                    style="@style/title_right_style"
+                    android:text="@string/connect" />
+                <!-- 显示已连接卫星数目(id:connect_num) -->
+                <TextView
+                    android:id="@+id/bconnect_num"
+                    style="@style/content_right_style" />
+            </RelativeLayout>
+        </LinearLayout>
+        
+        <!-- 画卫星方位图 -->
+        <LinearLayout 
+            android:id="@+id/satellite_view_layout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="5"
+            android:gravity="center_vertical"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/layout_spacing"
+            android:layout_marginLeft="@dimen/layout_spacing"
+            android:layout_marginRight="@dimen/layout_spacing" >
+            
+            <cn.ac.casic.gnss.graphics.SatelliteView
+                android:id="@+id/satellite_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/background_color" />
+        </LinearLayout>
+
+    </LinearLayout>
+	
+	
+	<!-- 显示卫星信号强度颜色分布图 -->
+    <LinearLayout
+        android:id="@+id/scale_bar_layout" 
+        style="@style/layout_super_border_style"
+        android:layout_weight="1" >
+
+        <cn.ac.casic.gnss.graphics.SignalScaleBar
+            android:id="@+id/scale_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/layout_spacing"
+            android:background="@color/background_color" />
+    </LinearLayout>
+    
+</LinearLayout>
