@@ -6,7 +6,7 @@
 
 - 信号强度展示界面；此界面中分成了上下两部分，上面显示gps和glonass，下面显示bds和Galileo；未定位的是灰色，已定位的是蓝色；
 
-![信号强度展示界面](https://goo.gl/photos/HpwPj4QmES1uGSru5)
+![信号强度展示界面](http://f.picphotos.baidu.com/album/s%3D740%3Bq%3D90/sign=022b7a508235e5dd942ca7db46fdd6d2/cefc1e178a82b90107795931748da9773812efd8.jpg)
 
 - 卫星方位展示界面；此界面主要显示了卫星的方位信息。同时显示了可见卫星数目和已连接卫星数目；
 
