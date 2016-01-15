@@ -80,7 +80,7 @@
             android:layout_marginLeft="@dimen/layout_spacing"
             android:layout_marginRight="@dimen/layout_spacing" >
             
-            <cn.ac.casic.gnss.graphics.SatelliteView
+            <com.tonker.gnss.graphics.SatelliteView
                 android:id="@+id/satellite_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -96,7 +96,7 @@
         style="@style/layout_super_border_style"
         android:layout_weight="1" >
 
-        <cn.ac.casic.gnss.graphics.SignalScaleBar
+        <com.tonker.gnss.graphics.SignalScaleBar
             android:id="@+id/scale_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

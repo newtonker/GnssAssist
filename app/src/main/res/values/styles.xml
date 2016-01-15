@@ -159,18 +159,5 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    
-    
-    <!-- 菜单文本样式 -->
-    <style name="menuTextStyle" parent="@android:style/TextAppearance.Small">
-        <item name="android:textSize">@dimen/menu_font_size</item>
-        <item name="android:textColor">@color/menu_text_color</item>
-    </style>
-    
-    <!-- 菜单显示动画 -->
-    <style name="menushow">
-        <item name="android:windowEnterAnimation">@anim/menu_in</item>
-        <item name="android:windowExitAnimation">@anim/menu_out</item>
-    </style>
 
 </resources>

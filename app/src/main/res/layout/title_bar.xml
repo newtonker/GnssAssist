@@ -16,7 +16,8 @@
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
         android:background="@drawable/title_back_button_selector"
-        android:padding="10.0dp" />
+        android:padding="10.0dp"
+        android:visibility="gone"/>
 
     <TextView
         android:id="@+id/title_name_content"
@@ -30,7 +31,7 @@
         android:shadowRadius="1.0"
         android:singleLine="true"
 
-        android:textColor="@color/feedback_white"
+        android:textColor="@color/white"
         android:textSize="@dimen/content_font_size" />
 
     <ImageView
@@ -40,6 +41,7 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:background="@drawable/title_next_button_selector"
-        android:paddingRight="10.0dp" />
+        android:paddingRight="10.0dp"
+        android:visibility="gone" />
 
 </RelativeLayout>

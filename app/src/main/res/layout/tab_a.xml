@@ -124,7 +124,7 @@
             android:layout_weight="6.0"
             android:layout_marginLeft="@dimen/view_spacing"
             android:layout_marginRight="@dimen/view_spacing" >
-            <cn.ac.casic.gnss.graphics.BarChart
+            <com.tonker.gnss.graphics.BarChart
                 android:id="@+id/snr_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -207,7 +207,7 @@
             android:layout_weight="6.0"
             android:layout_marginLeft="@dimen/view_spacing"
             android:layout_marginRight="@dimen/view_spacing" >
-            <cn.ac.casic.gnss.graphics.BdsBarChart
+            <com.tonker.gnss.graphics.BdsBarChart
                 android:id="@+id/bds_snr_view"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

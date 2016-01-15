@@ -1,14 +1,7 @@
 <resources>
 	<!-- 应用程序名 -->
     <string name="app_name">GNSS Assist</string>
-    <!-- 启动界面 -->
-    <string name="start_rights_text">©2013&#8211;2014 casic, all rights reserved.</string>
-    <string name="start_version">V 1.0</string>
-    <string name="start_app">GNSS Assist</string>
-    
-    <!-- 应用程序异常时，反馈会服务器 -->
-    <string name="exception_url">http://192.168.1.101:80/gnss/exception/exception.php</string>
-    
+
     <!-- 信噪比界面所用名 -->
     <string name="signal">信号强度</string>
     
@@ -20,7 +13,7 @@
     
     <!-- 卫星方位界面所用名 -->
     <string name="orientation">卫星方位</string>
-    <string name="connect_time">首次定位（秒）</string>
+    <!--<string name="connect_time">首次定位（秒）</string>-->
     
     <!-- 时间及坐标界面所用名 -->
     <string name="time">时间坐标</string>
@@ -45,61 +38,18 @@
     <string name="galileo">GALILEO</string>
 	
 	<string name="message">文本协议</string>
-	<string name="message_pause">暂停</string>
-	<string name="message_continue">继续</string>
+	<!--<string name="message_pause">暂停</string>-->
+	<!--<string name="message_continue">继续</string>-->
 	<string name="message_clear">清除</string>
-	<string name="message_save_off">保存</string>
-	<string name="message_save_on">取消</string>
+	<!--<string name="message_save_off">保存</string>-->
+	<!--<string name="message_save_on">取消</string>-->
 	<string name="message_open">打开</string>
-	<!-- 地图界面 -->
-	<string name="map">地图导航</string>
-	<!-- 菜单描述 -->
-	<string name="menu_item_icon">图片</string>
 	
 	<!-- 文件对话框 -->
 	<string name="filedialog_image_content">对话框图标</string>
-	<string name="hello_world">打开文件</string>
-    <string name="menu_settings">Settings</string>
-    <string name="title_activity_open_file_demo">OpenFileDemo</string>
-    <string name="alert_dialog_two_buttons_title">对话框测试</string>
-    
-    <!-- 反馈对话框 -->
-    <string name="feedback_edit">意见反馈</string>
-    <string name="feedback_contact_hint">联系方式:邮箱/QQ/手机号</string>
-    <string name="feedback_content_hint">请输入您的宝贵意见</string>
-    <string name="feedback_submit">提交</string>
-    <string name="feedback_record">反馈记录</string>
-    <string name="feedback_request_content">请输入您反馈的意见</string>
-    <string name="feedback_request_contact">请输入您的联系方式</string>
-    <string name="feedback_waiting">正在处理，请稍等片刻…</string>
-    <string name="feedback_success">发送成功</string>
-    <string name="feedback_failed">发送失败</string>
-    <string name="feedback_server_url">http://192.168.1.101:80/gnss/feedback/feedback.php</string>
-    
-    <!-- 关于对话框 -->
-    <string name="about_name">关于</string>
-    <string name="about_copyright">杭州中科微电子有限公司 版权所有\n客服热线：0571&#8211;28918126\n公司网站：www.icofchina.com\nCopyright©2013&#8211;2014 casic\nAll Rights Reserved</string>
-    <string name="about_terms_of_service">服务条款</string>
-    <string name="about_terms_of_service_text">\t\t 尊敬的用户，欢迎使用GNSS Assist应用软件。请您在使用前务必仔细阅读如下服务条款：\n
-        \t\t 一、该软件开发的初衷是为杭州中科微电子有限公司研发的GNSS导航芯片应用于Android平台时提供软件支持，同时也适当支持了同功能其他型号的芯片，但不保证完全支持。\n
-        \t\t 二、该软件显示数据的准确性取决于您手机中某些部件，如GNSS导航芯片和传感器等，软件作者不能保证显示的数据完全准确。\n
-        \t\t 三、在使用过程中如出现的问题，欢迎您通过反馈的方式与作者取得联系。\n\t</string>
-    <string name="about_terms_of_service_button">确定</string>
-    
-    <!-- 设置对话框 -->
-    <string name="setting_name">设置</string>
-    <string name="setting_date">日期格式</string>
-    <string name="setting_time">时间格式</string>
-    <string name="setting_longitude">坐标系格式</string>
-    <string name="setting_accuracy">准确度精度</string>
-    <string name="setting_altitude">海拔精度</string>
-    <string name="setting_speed">速度精度</string>
-    <string name="setting_bearing">方向角精度</string>
-    <string name="setting_default">恢复默认设置</string>
-	
-    <!-- 更新对话框 -->
-    <string name="update_server_url">http://192.168.1.101:80/gnss/version.xml</string>
-    <string name="update_name">软件升级</string>
-    <string name="update_now">立即升级</string>
-    <string name="update_later">暂不升级</string>
+	<!--<string name="hello_world">打开文件</string>-->
+    <!--<string name="menu_settings">Settings</string>-->
+    <!--<string name="title_activity_open_file_demo">OpenFileDemo</string>-->
+    <!--<string name="alert_dialog_two_buttons_title">对话框测试</string>-->
+
 </resources>

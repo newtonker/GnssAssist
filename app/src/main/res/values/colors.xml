@@ -5,7 +5,7 @@
     <!-- 组件边框线条的颜色 -->
     <color name="stroke_color">#000</color>
     <!-- 底部标签选择的颜色 -->
-    <color name="tab_selected_bg">#C4E1E1</color>
+    <!--<color name="tab_selected_bg">#C4E1E1</color>-->
     <!-- 显示框内容颜色 -->
     <!--  
     <color name="content_font_color">#86F</color>
@@ -21,19 +21,7 @@
 	<!-- 打开文件对话框颜色 -->
 	<color name="filedialog_background">#000000</color>
 	<color name="filedialog_item_font_color">#FFFFFF</color>
-    <!-- 反馈对话框 -->
-	<color name="feedback_background_color">#FFDBDADA</color>
-	<color name="feedback_white">#FFFFFFFF</color>
-	<color name="feedback_gray">#FFC3C3C3</color>
-	<color name="feedback_black">#FF000000</color>
-	<!-- 关于对话框 -->
-	<color name="about_background_color">#FFDBDADA</color>
-	<color name="about_white_color">#FFFFFFFF</color>
-	<color name="about_gray_color">#FFC3C3C3</color>
-	
-	<!-- 设置对话框 -->
-	<color name="setting_gray_color">#FF818181</color>
-	<color name="setting_black_color">#FF000000</color>
-	<color name="setting_background_color">#FFDBDADA</color>
-		
+
+    <color name="white">#FFFFFFFF</color>
+
 </resources>
