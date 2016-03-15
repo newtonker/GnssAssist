@@ -5,7 +5,7 @@ package com.tonker.gnss.constant;
  */
 public class Constant
 {
-	//菜单退出时用
+	//菜单退出时使用
 	public final static String EXIT_TO_CONFIRM = "确认退出？";
 	public final static String EXIT_CONFIRM = "确认";
 	public final static String EXIT_CANCEL = "取消";
