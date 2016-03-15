@@ -18,7 +18,6 @@ import com.tonker.gnss.location.LocationAdapter;
 
 /**
  * 这一个类是开机动画执行完后要执行的类，该类主要用来加载四个标签页，开启获取定位类实例，显示菜单等。
- *
  * @author newtonker
  * @date 2014-06-10
  */
